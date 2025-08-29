@@ -1,0 +1,49 @@
+### Get /
+GET http://localhost:5050
+
+
+### create user
+POST http://localhost:5050/auth/register
+Content-Type: application/json
+
+{
+    "username":"laka@gmail.com",
+    "password":"hello"
+}
+
+
+### for login route
+POST http://localhost:5050/auth/login
+Content-Type: application/json
+
+{
+    "username":"laka@gmail.com",
+    "password":"hello"
+}
+### fetch all todos get/todos
+GET http://localhost:5050/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU2NDEyNDAwLCJleHAiOjE3NTY0OTg4MDB9.yLfkHZCNoHq2SCPhvT0febq2R6EdRSAk0SHqUfhrFTU
+
+
+### Creates a new TODO post
+POST http://localhost:5050/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU2NDEyNDAwLCJleHAiOjE3NTY0OTg4MDB9.yLfkHZCNoHq2SCPhvT0febq2R6EdRSAk0SHqUfhrFTU
+Content-Type: application/json
+
+{
+    "task":"Finish cleaning"
+}
+
+### Update a TODO post
+PUT http://localhost:5050/todos/2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU2NDExMTc4LCJleHAiOjE3NTY0OTc1Nzh9.LAlAL4jJglk_61vGnUBu7kRqXs40bKsJNhUfCSKaiIo
+
+{
+    "completed":1
+}
+
+### Delete a TODO post
+DELETE http://localhost:5050/todos/2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzU2NDExMTc4LCJleHAiOjE3NTY0OTc1Nzh9.LAlAL4jJglk_61vGnUBu7kRqXs40bKsJNhUfCSKaiIo
